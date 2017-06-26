@@ -23,7 +23,7 @@ define('js',asset.'/js');
 define('SITENAME', 'Vecchio Forno');
 
 // Separador de título, ex. Título - LP Template
-define('GLOBAL_SEP', '-');
+define('GLOBAL_SEP', ':');
 
 // Nombre simplificado del sitio
 define('SLUG','vecchio');
