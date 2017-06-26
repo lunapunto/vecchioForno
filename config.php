@@ -14,7 +14,7 @@ define('is_production', $production);
 
 
 // Directorios
-define('dir','http://'.$_SERVER['HTTP_HOST'].'/vecchio');
+define('dir','http://'.$_SERVER['HTTP_HOST'].'/vecchioForno');
 define('asset',dir.'/assets');
 define('css',asset.'/css');
 define('js',asset.'/js');
