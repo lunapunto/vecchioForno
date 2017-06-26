@@ -1,0 +1,253 @@
+@media (max-width: 1140px){
+	/*
+	* FIXED MENU
+	*/
+	nav.clone-menu {
+		widht: 47%;
+		padding-left: 10px;
+	}
+	
+	.right-content { width: 39%; }
+	img.flag-menu { margin: 8px 20px; }
+	.red-menu { padding: 0px 20px; }
+}
+
+@media (max-width: 1110px){
+	/*
+	* HISTORIA
+	*/
+	.text-container { width: 50%; }
+	
+	ul#gellery { 
+		width: 50%; 
+		height: 460px;
+	}
+	
+	ul#gellery li { height: 460px !important; }
+}
+
+@media (max-width: 950px){
+	/*
+	* FIXED MENU
+	*/
+	nav.clone-menu a.menu-item,
+	a.rsvp { font-size: 13px; }
+	
+}
+
+@media (max-width: 730px){
+	/* 
+	* HOME 
+	*/
+	ul#slider {
+		height: 210px !important;
+		position: relative;
+	}
+	
+	ul#slider li { height: 210px !important; }
+	.menu-top:before { display: none; }
+	
+	.menu-top:after {
+		display: block;
+		content: '';
+		width: 100%;
+		padding-top: 29%;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		background-image: url(../img/trazo-top.svg);
+		background-size: cover;
+		background-position: center;
+	}
+	
+	img.logo-menu {
+		display: block;
+		width: 220px;
+		margin: 25px auto 40px;
+	}
+	
+	a.menu-item {
+		width: 120px;
+		font-size: 17px;
+		line-height: 37px;
+	}
+	
+	.social-media,
+	span#scroll-down { position: relative; }
+	
+	.social-media { margin-bottom: 20px; }
+	
+	.menu-top { 
+		width: 100%; 
+		height: auto !important;
+	}
+	
+	span#scroll-down { bottom: 35%; }
+	
+	.container-uber {
+		position: fixed;
+		bottom: 5px;
+		right: 5px;
+		width: 40px;
+		height: 40px;
+		border-radius: 50%;
+		background-color: #1d1c1c;
+		overflow: hidden;
+		z-index: 10;
+	}
+	
+	.container-uber img.logo-uber {
+		display: block;
+		height: 100%;
+		width: auto;
+		margin: 0 auto;
+		position: relative;
+	}
+	
+	
+	/*
+	* FIXED MENU
+	*/
+	.red-menu { display: none; }
+	
+	.flag-mobile {
+		position: fixed;
+		top: 5px;
+		right: 0;
+		z-index: 10;
+		display: block;
+	}
+	
+	a.mobile-btn {
+		display: block;
+		width: 100%;
+		text-align: center;
+		background-color: #FF3D46;
+		border: 2px solid #FF3D46;
+		color: #FFF;
+		margin-bottom: 7px;
+		padding: 3px 7px;
+		-webkit-transition: .3s all ease-in-out;
+		-moz-transition: .3s all ease-in-out;
+		-o-transition: .3s all ease-in-out;
+		transition: .3s all ease-in-out;
+		box-shadow: 5px 3px 7px rgba(0, 0, 0, 0.04);
+	}
+	
+	a.mobile-btn:hover {
+		background-color: transparent;
+		color: #FF3D46;
+	}
+	
+	/*
+	* HISTORIA
+	*/
+	
+	div#historia { 
+		padding: 0px 0px;
+		display: block;
+		margin-top: -10px;
+		height: auto !important;
+    	padding-bottom: 10px;
+	}
+	
+	.text-container {
+		width: 100%;
+		padding: 0;
+		margin-bottom: 70px;
+	}
+	
+	.text-container h2 {
+		background-color: #FF3D46;
+		color: #FFF;
+		vertical-align: top;
+		padding: 30px 70px;
+		text-align: center;
+		font-size: 20px;
+		line-height: 160%;
+		margin-top: -17px;
+	}
+	
+	.text-container p {
+		line-height: 130%;
+		font-size: 18px;
+		padding: 0px 55px;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+	}
+	
+	ul#gellery,
+	ul#gellery li,
+	ul#gallery-movil,
+	ul#gallery-movil li {
+		width: 100%;
+		height: 225px !important;
+	}
+	
+	ul#gellery { display: none; } 
+	ul#gallery-movil { display: block; }
+	button.slick-arrow { bottom: 40px; }
+	
+	/* 
+	* UBICACIÓN 
+	*/
+	div#ubicacion { 
+		display: block;
+		padding-top: 10px; 
+	}
+	
+	div#map,
+	.info-location { width: 100%; }
+	
+	div#map { height: 230px; }
+	.info-location { margin-top: 0px; }
+	
+	div#parallax { min-height: 200px; }
+	
+	
+	/* 
+	* CONTACTO 
+	*/
+	
+	div#contacto { 
+		display: block; 
+		padding: 150px 50px 90px;
+		margin-top: 0px; 
+	}
+	
+	form#contact-form {
+		width: 100%;
+		padding-right: 0px;
+		border-right: 0px;
+		float: left;
+		border-bottom: 2px solid #FFF;
+		padding-bottom: 50px;
+		margin-bottom: 50px;
+	}
+	
+	.info-contact {
+		width: 100%;
+		padding-left: 0px;
+		text-align: center;
+	}
+	
+	div#contacto:before,
+	.legales:before { background-size: 100%; }
+	
+	.info-contact .social-media { text-align: center; }
+	img.logo-contact { width: 100%; }
+	
+}
+
+@media (max-width: 630px){
+	/* 
+	* HOME 
+	*/
+	.menu-top:after { 
+		height: 44%;
+		position: relative; 
+	}
+}
+
+/*# sourceMappingURL=responsive.css.map */

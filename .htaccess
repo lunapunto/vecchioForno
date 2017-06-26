@@ -1,0 +1,18 @@
+RewriteEngine On
+# Activar en producción si tiene SSL
+#RewriteCond %{HTTPS} !=on
+#RewriteRule ^.*$ https://%{SERVER_NAME}%{REQUEST_URI} [R,L]
+
+#Redirección Admin
+RewriteRule    ^admin/login/?$    admin/login.php    [NC,L,QSA]
+RewriteRule    ^admin/?$    admin/index.php    [NC,L,QSA]
+RewriteRule    ^admin/([A-Za-z0-9-]+)/?$    admin/$1.php    [NC,L,QSA]
+
+# Manda a index.php por default
+RewriteRule    ^$    main/index.php    [NC,L,QSA]
+
+# Manda a $1.php por default, i.e. localhost/prueba manda a localhost/main/prueba.php
+RewriteRule    ^([A-Za-z0-9-]+)/?$    main/$1.php   [NC,L,QSA]
+
+#Cambiar en Modo Producción
+ErrorDocument 404 /LPTemplate/main/404.php
