@@ -21,20 +21,23 @@ get_header($q);
             <img src="<?= asset.'/img/logo.svg';?>" alt="Vecchio Forno" class="logo-menu" />
 
             <nav class="main-menu">
-                <a href="#reservar" class="menu-item menu-border">Reservar</a>
-                <a href="#menu" class="menu-item">Menú</a>
-                <a href="#historia" class="menu-item">Historia</a>
-                <a href="#ubicacion" class="menu-item">Ubicación</a>
+                <a href="#reservar" class="menu-item-sec menu-border">Reservar</a>
+                <a href="#menu" class="menu-item-sec">Menú</a>
+                <a href="#historia" class="menu-item-sec">Historia</a>
+                <a href="#ubicacion" class="menu-item-sec">Ubicación</a>
             </nav> <!-- /main-menu -->
+            <div class="menu-redes">
+              <div class="social-media">
+                  <a href="#" class="social-item twitter" target="_blank"></a>
+                  <a href="#" class="social-item facebook" target="_blank"></a>
+                  <a href="#" class="social-item instagram" target="_blank"></a>
+              </div> <!-- /social-media -->
 
-            <div class="social-media">
-                <a href="#" class="social-item twitter" target="_blank"></a>
-                <a href="#" class="social-item facebook" target="_blank"></a>
-                <a href="#" class="social-item instagram" target="_blank"></a>
-            </div> <!-- /social-media -->
-
-            <span id="scroll-down" class="cx"></span>
+              <span id="scroll-down" class="cx"></span>
+            </div>
         </div> <!-- /menu-top -->
+
+
 
         <div class="container-uber">
         	<img src="<?= asset.'/img/logo-uber.svg';?>" alt="Vecchio Forno" class="logo-uber" />
@@ -47,7 +50,7 @@ get_header($q);
 	</div> <!-- /home -->
 
     <div class="red-menu">
-        <a class="link-home" href="http://localhost/LPTemplate/main/"><img src="<?= asset.'/img/logo-min.svg';?>" alt="Vecchio Forno" class="logo-min" /></a>
+        <a class="link-home" href="#home"><img src="<?= asset.'/img/logo-min.svg';?>" alt="Vecchio Forno" class="logo-min" /></a>
 
         <nav class="clone-menu">
             <a href="#menu" class="menu-item menu-item-1">Menú</a>
@@ -113,17 +116,47 @@ get_header($q);
         </div> <!-- /info-location -->
     </div> <!-- /ubicacion -->
 
-    <div id="parallax" class="parallax-window" data-parallax="scroll" data-image-src="<?= asset.'/img/4.jpg'; ?>"></div> <!-- parrallax -->
+    <!--<div id="parallax" class="parallax-window" data-parallax="scroll" speed="0.4" bleed="-200" data-image-src="<?= asset.'/img/4.jpg'; ?>"></div> <!-- parrallax -->
+
+    <section id="parallaxlike">
+
+    </section>
 
     <div id="contacto">
     	<form id="contact-form">
-        	<input type="text" name="name" placeholder="NOMBRE" class="field half" />
-            <input type="text" name="phone" placeholder="TELÉFONO" class="field half right" />
-            <input type="text" name="mail" placeholder="CORREO ELECTRÓNICO" class="field full-field" />
-            <textarea placeholder="MENSAJE" name="message" class="campo full-field"></textarea>
-            <input type="hidden" value="true" name="send" />
-            <input type="button" value="CONTACTAR" name="btn_send" class="btn-send" />
-        </form> <!-- /contact-form -->
+        <div class="row">
+          <div class="row">
+            <div class="input-field col s6">
+              <input id="name" type="text" required>
+              <label for="name">Nombre<span class="required">*</span></label>
+            </div>
+            <div class="input-field col s6">
+              <input id="phone" type="tel">
+              <label for="phone">Teléfono</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <input id="email" type="email" required>
+              <label for="email">Correo Electrónico<span class="required">*</span></label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <textarea id="msg" class="materialize-textarea"></textarea>
+              <label for="msg">Mensaje<span class="required">*</span></label>
+            </div>
+          </div>
+          <div class="row-submit">
+            <div class="col s6">
+
+            </div>
+            <div class="col s6">
+              <button type="submit" class="submit-button">Contactar</button>
+            </div>
+          </div>
+        </div>
+      </form> <!-- /contact-form -->
 
         <div class="info-contact">
 			<img src="<?= asset.'/img/logo-loader.svg';?>" alt="Vecchio Forno" class="logo-contact" />
@@ -146,7 +179,7 @@ get_header($q);
     	<small class="text-full">
         	<a href="#">Facturación</a>  | <a href="#">Reservaciones</a>
         </small> <!-- /text-full -->
-        <small class="text-full">© Vecchio Forno 2017 CDMX  |  Lunapunto </small> <!-- /text-full -->
+        <small class="text-full">© Vecchio Forno 2017 CDMX<br /><a href="https://lunapunto.com" target="_blank">Made with love by Luna Punto | 07-17</a></small> <!-- /text-full -->
     </div> <!-- /legales -->
 </div> <!-- /main-container -->
 
@@ -176,25 +209,25 @@ $('ul#gellery, ul#gallery-movil').slick({
 });
 
 function initMap() {
+  var svg = '<?= trim(file_get_contents(asset.'/img/marker.svg'));?>';
+  var svgicon = 'data:image/svg+xml;charset=UTF-8;base64,' + btoa(svg);
+  console.log(svgicon);
 	var info = {lat: 19.4187085, lng: -99.1751216};
+
 	var map = new google.maps.Map(document.getElementById('map'), {
 	  zoom: 17,
 	  center: info,
 	  styles: [{"featureType":"water","elementType":"geometry","stylers":[{"color":"#e9e9e9"},{"lightness":17}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"color":"#f5f5f5"},{"lightness":20}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#ffffff"},{"lightness":17}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#ffffff"},{"lightness":29},{"weight":0.2}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"color":"#ffffff"},{"lightness":18}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#ffffff"},{"lightness":16}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#f5f5f5"},{"lightness":21}]},{"featureType":"poi.park","elementType":"geometry","stylers":[{"color":"#dedede"},{"lightness":21}]},{"elementType":"labels.text.stroke","stylers":[{"visibility":"on"},{"color":"#ffffff"},{"lightness":16}]},{"elementType":"labels.text.fill","stylers":[{"saturation":36},{"color":"#333333"},{"lightness":40}]},{"elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"transit","elementType":"geometry","stylers":[{"color":"#f2f2f2"},{"lightness":19}]},{"featureType":"administrative","elementType":"geometry.fill","stylers":[{"color":"#fefefe"},{"lightness":20}]},{"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"color":"#fefefe"},{"lightness":17},{"weight":1.2}]}],
-	  scaleControl: false,
-	  draggable: false,
-	  zoomControl: false,
-	  scaleControl: false,
-	  scrollwheel: false,
+    scrollwheel: false,
 	});
 
-	var markerImg = '<?= asset."/img/marker.png";?>';
+  var marker = new google.maps.Marker({
+    position: info,
+    map: map,
+    draggable: false,
+    icon: svgicon
+  });
 
-	var marker = new google.maps.Marker({
-	  position: info,
-	  icon: markerImg,
-	  map: map
-	});
   }
 
 $('.parallax-window').parallax({imageSrc: "<?= asset.'/img/4.jpg';?>"});
