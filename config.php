@@ -14,7 +14,7 @@ define('is_production', $production);
 
 
 // Directorios
-define('dir','https://beta.lunapunto.com/vecchio');
+define('dir','https://beta.lunapunto.com/vecchioforno');
 define('asset',dir.'/assets');
 define('css',asset.'/css');
 define('js',asset.'/js');
