@@ -68,7 +68,7 @@ $(document).ready(function(){
 				var tope = $('#ubicacion').scrollTop()*0.3;
 			}
 		}  //if($(window).outerWidth() < 650) {
-
+    $('body').stop().addClass('menu-clone-fixed-body');
 		$('.red-menu').stop().addClass('menu-clone-fixed');
 		$('html, body').stop().animate({
 			'scrollTop': $target.offset().top + tope
@@ -132,10 +132,46 @@ $(document).scroll(function(){
 	$window.scroll(function() {
 		if ( $window.scrollTop() >= distance ) {
 			if( $(".red-menu:not(.menu-clone-fixed)") ) {
+        $('body').addClass('menu-clone-f');
 				$('.red-menu').stop().addClass('menu-clone-fixed');
 			}
 		} else {
+      $('body').removeClass('menu-clone-f');
 			$('.red-menu').stop().removeClass('menu-clone-fixed');
 		}
 	});
 });
+$(document).on('click', '#button', function(){
+
+})
+$(document).on('submit', '#contact-form', function(e){
+  e.preventDefault();
+  var t = $(this);
+  var obj = {
+    action: 'sendemail',
+    name: t.find('#name').val(),
+    phone: t.find('#phone').val(),
+    email: t.find('#email').val(),
+    msg: t.find('#msg').val()
+  };
+
+  $.post(ajaxurl, obj, function(msg){console.log(msg)}, 'json').always(function(msg){
+    t.find('input,textarea').val('');
+    $.alert({
+    title: '¡Gracias!',
+    content: 'Recibimos tu mensaje. Pronto estaremos en contacto.',
+    theme: 'supervan',
+    animation: 'opacity',
+    closeAnimation: 'opacity',
+    backgroundDismiss: true,
+    buttons: {
+      confirm:{
+      text: 'Cerrar',
+      action: function () {
+      }
+    },
+    }
+    });
+
+  })
+})

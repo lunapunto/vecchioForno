@@ -12,9 +12,9 @@ get_header($q);
 	<div id="home" class="full">
         <img src="<?= asset.'/img/flag.png';?>" alt="Vecchio Forno" class="flag-home" />
         <ul id="slider" class="full">
-            <li class="full" style="background-image:url(<?= asset.'/img/1.jpg';?>);"></li>
-            <li class="full" style="background-image:url(<?= asset.'/img/2.jpg';?>);"></li>
-            <li class="full" style="background-image:url(<?= asset.'/img/3.jpg';?>);"></li>
+            <li class="full carousel-cell" style="background-image:url(<?= asset.'/img/1.jpg';?>);"></li>
+            <li class="full carousel-cell" style="background-image:url(<?= asset.'/img/2.jpg';?>);"></li>
+            <li class="full carousel-cell" style="background-image:url(<?= asset.'/img/3.jpg';?>);"></li>
         </ul> <!-- /slider -->
 
         <div class="menu-top cx full back-paper">
@@ -38,10 +38,11 @@ get_header($q);
         </div> <!-- /menu-top -->
 
 
-
-        <div class="container-uber">
-        	<img src="<?= asset.'/img/logo-uber.svg';?>" alt="Vecchio Forno" class="logo-uber" />
-        </div> <!-- /container-uber -->
+        <a href="https://www.ubereats.com/es/mexico-city/food-delivery/vecchio-forno/1N2rrqJUTFuIz4mWSPafTA/" target="_blank">
+          <div class="container-uber">
+          	<img src="<?= asset.'/img/logo-uber.svg';?>" alt="Vecchio Forno" class="logo-uber" />
+          </div> <!-- /container-uber -->
+        </a>
 
         <div class="flag-mobile">
         	<a href="#" class="mobile-btn">RSVP</a>
@@ -121,7 +122,6 @@ get_header($q);
     <section id="parallaxlike">
 
     </section>
-
     <div id="contacto">
     	<form id="contact-form">
         <div class="row">
@@ -184,16 +184,11 @@ get_header($q);
 </div> <!-- /main-container -->
 
 <script>
-$('ul#slider').slick({
-	autoplay: true,
-	autoplaySpeed: 6000,
-	slidesToShow: 1,
-	slidesToScroll: 1,
-	arrows: false,
-	fade: true,
-	pauseOnHover: false,
-	speed: 1000,
-	dots: false
+$('ul#slider').flickity({
+	autoPlay: 5000,
+  wrapAround: true,
+  prevNextButtons: false,
+  pageDots: false
 });
 
 $('ul#gellery, ul#gallery-movil').slick({

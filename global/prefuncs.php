@@ -164,13 +164,18 @@ function scriptsstyles($isadmin = false){
     $scripts['mat'] = $bower.'/materialize/bin/materialize.js';
 
     $scripts['velocity'] = $bower.'/velocity/velocity.min.js';
-	
-	$scripts['slick'] = $bower.'/slick/slick.js';
-	$styles['slick'] = $bower.'/slick/slick.css';
-	
-	$scripts['parallax'] = $bower.'/parallax/parallax.js';
-	
-	
+
+  	$scripts['slick'] = $bower.'/slick/slick.js';
+  	$styles['slick'] = $bower.'/slick/slick.css';
+
+    $scripts['flickity'] = $bower.'/flickity/dist/flickity.pkgd.min.js';
+    $styles['flickity'] = $bower.'/flickity/dist/flickity.min.css';
+
+  	$scripts['parallax'] = $bower.'/parallax/parallax.js';
+
+    $scripts['confirm'] = $bower.'/jquery-confirm2/dist/jquery-confirm.min.js';
+    $styles['confirm'] = $bower.'/jquery-confirm2/dist/jquery-confirm.min.css';
+
     if($isadmin){
       $styles['admin'] = css.'/admin.css';
       $scripts['admin'] = js.'/admin.js';
