@@ -9,12 +9,12 @@
 */
 
 // ¿El sitio web está en producción?
-$production = false;
+$production = true;
 define('is_production', $production);
 
 
 // Directorios
-define('dir','http://'.$_SERVER['HTTP_HOST'].'/vecchioForno');
+define('dir','https://beta.lunapunto.com/vecchio');
 define('asset',dir.'/assets');
 define('css',asset.'/css');
 define('js',asset.'/js');
