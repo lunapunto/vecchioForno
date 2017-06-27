@@ -22,7 +22,7 @@ get_header($q);
 
             <nav class="main-menu">
                 <a href="#reservar" class="menu-item-sec menu-border">Reservar</a>
-                <a href="#menu" class="menu-item-sec">Menú</a>
+                <a href="<?= asset.'/menu.pdf';?>" target="_blank" class="menu-item-sec">Menú</a>
                 <a href="#historia" class="menu-item-sec">Historia</a>
                 <a href="#ubicacion" class="menu-item-sec">Ubicación</a>
             </nav> <!-- /main-menu -->
@@ -85,7 +85,7 @@ get_header($q);
 
             <p>The key is to drink coconut, fresh coconut, trust me. Look at the sunset, life is amazing, life is beautiful, life is what you make it. Eliptical talk. I’m giving you cloth talk, cloth. Special cloth alert, cut from a special cloth. In life you have to take the trash out, if you have trash in your life, take it out, throw it away, get rid of it, major key. To succeed you must believe. When you believe, you will succeed.</p>
 
-            <a href="#" class="menu-link">nuestra carta</a>
+            <a href="<?= asset.'/menu.pdf';?>" target="_blank" class="menu-link">nuestra carta</a>
         </div> <!-- /text-container -->
 
         <ul id="gellery">
