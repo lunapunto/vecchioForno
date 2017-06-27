@@ -1,7 +1,7 @@
 RewriteEngine On
 # Activar en producción si tiene SSL
-#RewriteCond %{HTTPS} !=on
-#RewriteRule ^.*$ https://%{SERVER_NAME}%{REQUEST_URI} [R,L]
+RewriteCond %{HTTPS} !=on
+RewriteRule ^.*$ https://%{SERVER_NAME}%{REQUEST_URI} [R,L]
 
 #Redirección Admin
 RewriteRule    ^admin/login/?$    admin/login.php    [NC,L,QSA]
