@@ -2,8 +2,19 @@
 
 @media (max-width: 1000px){
 
+	*{
+		background-attachment: scroll!important;
+	}
+	#scroll-down{
+		display: none;
+	}
 	.menu-item-sec{
-		font-size: 14px!important;
+		font-size: 16px!important;
+		width: auto!important;
+	}
+	.main-menu{
+		width: 150px!important;
+		margin: 0 auto;
 	}
 	.menu-top{
 		box-shadow:  none!important;
@@ -15,24 +26,27 @@
 	* HOME
 	*/
 	ul#slider {
-		height: 150px !important;
+		height: 120px !important;
 		position: absolute;
 		top: 0;
 		left: 0;
 		z-index: 2;
 	}
 
-	ul#slider li { height: 210px !important; }
+	ul#slider li { height:120px!important; }
 	.menu-top:before { display: none; }
 	.menu-redes{
-		bottom: 70px!important;
+		bottom: 50px!important;
+	}
+	.menu-redes .social-media{
+		margin: 0!important;
 	}
 	.menu-top:after {
 		display: block;
 		content: '';
 		width: 100%;
 		padding: 0!important;
-		height: 50px;
+		height: 30px;
 		position: absolute;
 		bottom: 0;
 		left: 0;
@@ -44,7 +58,7 @@
 	img.logo-menu {
 		display: block;
 		width: 220px;
-		margin: 5.5% auto 7%;
+		margin: 10px auto 20px;
 	}
 
 	a.menu-item {
@@ -61,7 +75,7 @@
 		top: 0;
 		position: absolute!important;
 		box-sizing: border-box;
-		padding-top: 150px;
+		padding-top: 120px;
 	}
 
 
